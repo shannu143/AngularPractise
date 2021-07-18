@@ -1,0 +1,11 @@
+<mat-sidenav-container>
+    <mat-sidenav #sidenav mode="side" (opened)="log('opned')" (closed)="log('closed')" [(opened)]="opened">SideNav</mat-sidenav>
+    <mat-sidenav-content>
+        Main content
+        change mode to side,push,over
+        <button (click)="opened = !opened"> Toggle side Bar</button>
+        <button (click)="sidenav.open()">open</button>
+        <button (click)="sidenav.close()">close</button>
+        <button (click)="sidenav.toggle()">toggle</button>
+    </mat-sidenav-content>
+</mat-sidenav-container>
